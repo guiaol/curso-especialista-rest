@@ -1,5 +1,8 @@
 package com.algaworks.algafood.di.service;
 
+import java.util.Iterator;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -10,11 +13,14 @@ import com.algaworks.algafood.di.notiicador.Notificador;
 public class AtivacaoClienteService {
 
 	@Autowired
-	private Notificador notificador;
+	private List<Notificador> notificadores;
 	
 	public void ativar(Cliente cliente) {
 		cliente.ativar();
-
-		notificador.notificar(cliente, "Seu cadastro no seu sistema est� ativo!");
+		
+		for (Notificador notificador : notificadores) {
+			notificador.notificar(cliente, "Seu cadastro no seu sistema est� ativo!");
+		}
+		
 	}
 }

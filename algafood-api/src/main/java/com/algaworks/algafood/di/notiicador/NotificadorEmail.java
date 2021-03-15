@@ -1,7 +1,10 @@
 package com.algaworks.algafood.di.notiicador;
 
+import org.springframework.stereotype.Component;
+
 import com.algaworks.algafood.di.modelo.Cliente;
 
+@Component
 public class NotificadorEmail implements Notificador {
 
 	private boolean caixaAlta;
@@ -9,7 +12,6 @@ public class NotificadorEmail implements Notificador {
 
 	public NotificadorEmail(String hostServidorSmtp) {
 		this.hostServidorSmtp = hostServidorSmtp;
-		System.out.println("NotificadorEmail");
 	}
 
 	@Override

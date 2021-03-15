@@ -12,18 +12,14 @@ public class AtivacaoClienteService {
 	@Autowired
 	private Notificador notificador;
 	
-//	@Autowired
-//	public AtivacaoClienteService(Notificador notificador) {
-//		this.notificador = notificador;
-//	}
-
 	public void ativar(Cliente cliente) {
 		cliente.ativar();
-		this.notificador.notificar(cliente, "Seu cadastro no seu sistema est� ativo!");
-	}
 
-//	@Autowired
-//	public void setNotificador(Notificador notificador) {
-//		this.notificador = notificador;
-//	}
+		if (notificador != null) {
+			this.notificador.notificar(cliente, "Seu cadastro no seu sistema est� ativo!");
+
+		} else {
+			System.out.println("Nao existe notificador, mas cliente foi ativado!");
+		}
+	}
 }

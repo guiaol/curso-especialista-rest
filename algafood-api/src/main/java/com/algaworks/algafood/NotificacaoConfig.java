@@ -3,7 +3,7 @@ package com.algaworks.algafood;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.algaworks.algafood.di.notiicador.NotificadorEmail;
+import com.algaworks.algafood.di.notificador.NotificadorEmail;
 
 @Configuration
 public class NotificacaoConfig {

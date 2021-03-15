@@ -8,10 +8,10 @@ import com.algaworks.algafood.di.notiicador.NotificadorEmail;
 @Configuration
 public class NotificacaoConfig {
 
-	@Bean
-	public NotificadorEmail notificadorEmail() {
-		NotificadorEmail notificadorEmail = new NotificadorEmail("smtp.algamail.com.br");
-		notificadorEmail.setCaixaAlta(true);
-		return notificadorEmail;
-	}
+//	@Bean
+//	public NotificadorEmail notificadorEmail() {
+//		NotificadorEmail notificadorEmail = new NotificadorEmail("smtp.algamail.com.br");
+//		notificadorEmail.setCaixaAlta(true);
+//		return notificadorEmail;
+//	}
 }

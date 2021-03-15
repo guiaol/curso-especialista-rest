@@ -15,11 +15,6 @@ public class AtivacaoClienteService {
 	public void ativar(Cliente cliente) {
 		cliente.ativar();
 
-		if (notificador != null) {
-			this.notificador.notificar(cliente, "Seu cadastro no seu sistema est� ativo!");
-
-		} else {
-			System.out.println("Nao existe notificador, mas cliente foi ativado!");
-		}
+		notificador.notificar(cliente, "Seu cadastro no seu sistema est� ativo!");
 	}
 }

@@ -14,7 +14,7 @@ public class AtivacaoClienteService {
 	@TipoDoNotificador(NivelUrgencia.NORMAL)
 	@Autowired
 	private Notificador notificador;
-	
+
 	public void ativar(Cliente cliente) {
 		cliente.ativar();
 

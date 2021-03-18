@@ -14,8 +14,8 @@ public class AtivacaoClienteService {
 	
 	public void ativar(Cliente cliente) {
 		cliente.ativar();
-		
-		eventPublisher.publishEvent(new ClienteAtivadoEvent(cliente));
 
+		eventPublisher.publishEvent(new ClienteAtivadoEvent(cliente));
 	}
+
 }

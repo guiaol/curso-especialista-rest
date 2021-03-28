@@ -1,4 +1,4 @@
-package com.algaworks.algafood.infrastruture.repository;
+package com.algaworks.algafood.infrastructure.repository;
 
 import java.util.List;
 
@@ -12,14 +12,15 @@ import com.algaworks.algafood.domain.model.Cozinha;
 import com.algaworks.algafood.domain.repository.CozinhaRepository;
 
 @Component
-class CozinhaRepositoryImpl implements CozinhaRepository {
+public class CozinhaRepositoryImpl implements CozinhaRepository {
 
 	@PersistenceContext
 	private EntityManager manager;
 	
 	@Override
 	public List<Cozinha> listar() {
-		return manager.createQuery("from Cozinha", Cozinha.class).getResultList();
+		return manager.createQuery("from Cozinha", Cozinha.class)
+				.getResultList();
 	}
 	
 	@Override
@@ -39,6 +40,5 @@ class CozinhaRepositoryImpl implements CozinhaRepository {
 		cozinha = buscar(cozinha.getId());
 		manager.remove(cozinha);
 	}
-	
 
 }

@@ -1,4 +1,4 @@
-package com.algaworks.algafood.infrastruture.repository;
+package com.algaworks.algafood.infrastructure.repository;
 
 import java.util.List;
 
@@ -19,7 +19,8 @@ public class RestauranteRepositoryImpl implements RestauranteRepository {
 	
 	@Override
 	public List<Restaurante> listar() {
-		return manager.createQuery("from Restaurante", Restaurante.class).getResultList();
+		return manager.createQuery("from Restaurante", Restaurante.class)
+				.getResultList();
 	}
 	
 	@Override
@@ -39,6 +40,5 @@ public class RestauranteRepositoryImpl implements RestauranteRepository {
 		restaurante = buscar(restaurante.getId());
 		manager.remove(restaurante);
 	}
-	
-	
+
 }

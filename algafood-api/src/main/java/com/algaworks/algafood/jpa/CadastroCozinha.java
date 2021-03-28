@@ -17,7 +17,8 @@ public class CadastroCozinha {
 	private EntityManager manager;
 	
 	public List<Cozinha> listar() {
-		return manager.createQuery("from Cozinha", Cozinha.class).getResultList();
+		return manager.createQuery("from Cozinha", Cozinha.class)
+				.getResultList();
 	}
 	
 	public Cozinha buscar(Long id) {
@@ -34,4 +35,5 @@ public class CadastroCozinha {
 		cozinha = buscar(cozinha.getId());
 		manager.remove(cozinha);
 	}
+	
 }

@@ -16,14 +16,12 @@ public class AlteracaoCozinhaMain {
 		
 		CadastroCozinha cadastroCozinha = applicationContext.getBean(CadastroCozinha.class);
 		
-		Cozinha cozinha1 = new Cozinha();
-		cozinha1.setNome("Brasileira");
+		Cozinha cozinha = new Cozinha();
+		cozinha.setId(1L);
+		cozinha.setNome("Brasileira");
 		
-		Cozinha cozinha2 = new Cozinha();
-		cozinha2.setNome("Japonesa");
+		cadastroCozinha.salvar(cozinha);
 		
-		cadastroCozinha.salvar(cozinha1);
-		cadastroCozinha.salvar(cozinha2);
 	}
 	
 }
